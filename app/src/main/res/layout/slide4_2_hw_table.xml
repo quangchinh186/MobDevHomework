@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
-        app:layout_constraintBaseline_toTopOf="parent"
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,41 +13,35 @@
         android:theme="?attr/actionBarTheme" />
 
     <EditText
-        android:layout_marginLeft="20dp"
-        app:layout_constraintTop_toBottomOf="@id/toolbar2"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/enterName"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:ems="16"
         android:inputType="text"
         android:hint="Enter your Name"
          />
 
     <EditText
-        app:layout_constraintTop_toBottomOf="@id/enterName"
-        app:layout_constraintLeft_toLeftOf="@id/enterName"
+        android:layout_gravity="center"
         android:id="@+id/phone"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:ems="16"
         android:hint="Enter your phone number"
         android:inputType="phone" />
 
     <RadioGroup
+        android:layout_marginLeft="20dp"
         android:id="@+id/cheese"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="@id/phone"
-        app:layout_constraintTop_toBottomOf="@id/phone">
+        android:orientation="horizontal">
         <RadioButton
             android:checked="true"
             android:id="@+id/cheese_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cheese" />
-
         <RadioButton
             android:id="@+id/cheese_2"
             android:layout_width="wrap_content"
@@ -67,8 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="@id/cheese"
-        app:layout_constraintTop_toBottomOf="@id/cheese">
+        android:layout_marginLeft="20dp">
         <RadioButton
             android:checked="true"
             android:id="@+id/shape_1"
@@ -83,29 +74,30 @@
             android:text="Round" />
     </RadioGroup>
 
-    <CheckBox
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tp_1"
-        app:layout_constraintLeft_toLeftOf="@id/shape"
-        app:layout_constraintTop_toBottomOf="@id/shape"
-        android:text="Pepperoni" />
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tp_1"
+            android:text="Pepperoni" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tp_2"
-        app:layout_constraintLeft_toRightOf="@id/tp_1"
-        app:layout_constraintTop_toBottomOf="@id/shape"
-        android:text="Mushroom" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tp_2"
+            android:text="Mushroom" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tp_3"
-        app:layout_constraintLeft_toRightOf="@id/tp_2"
-        app:layout_constraintTop_toBottomOf="@id/shape"
-        android:text="Veggies" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tp_3"
+            android:text="Veggies" />
+    </LinearLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -114,34 +106,37 @@
         android:text="Your ordering"
         android:textColor="@color/gray"
         android:id="@+id/order"
-        app:layout_constraintTop_toBottomOf="@id/tp_1"
-        app:layout_constraintLeft_toLeftOf="@id/tp_1"/>
+        android:layout_marginLeft="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:ems="20"
         android:id="@+id/preOrder"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/order"
+        android:layout_gravity="center"
         android:background="@color/gray"/>
 
-    <Button
-        android:id="@+id/exit"
+    <TableRow
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="@id/preOrder"
-        app:layout_constraintTop_toBottomOf="@id/preOrder"
-        android:text="EXIT"/>
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginLeft="20dp"
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXIT"/>
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="0dp"/>
+        <Button
+            android:layout_gravity="right"
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMS - PLACE YOUR ORDER"/>
+    </TableRow>
 
-    <Button
-        android:id="@+id/confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="@id/preOrder"
-        app:layout_constraintTop_toBottomOf="@id/preOrder"
-        android:text="SMS - PLACE YOUR ORDER"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</TableLayout>
