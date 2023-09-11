@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/toolbar"
+        android:text="@string/hello"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/please"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/message"
+        android:layout_below="@id/welcome"
+        android:textColor="#595151"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/payment"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_below="@id/please">
+        <RadioButton
+            android:id="@+id/paypal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/paypal" />
+        <RadioButton
+            android:id="@+id/direct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/direct" />
+    </RadioGroup>
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_weight="1"
+        android:layout_below="@id/please"
+        android:layout_alignParentRight="true"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_below="@id/payment"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressBackgroundTint="@color/design_default_color_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_below="@id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:layout_alignParentLeft="true"
+        android:textSize="20sp"
+        android:padding="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/progressBar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+
+    <Button
+        android:id="@+id/donate"
+        android:layout_margin="20dp"
+        android:layout_below="@id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/donate"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/donate"
+        android:layout_below="@id/amount"
+        android:text="@string/total" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_toRightOf="@id/total"
+        android:layout_below="@id/amount"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempTotal" />
+
+    <ImageButton
+        android:layout_below="@id/donate"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/mail"
+        android:layout_gravity="end"
+        android:layout_marginRight="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle"
+        />
+
+</RelativeLayout>
+
+

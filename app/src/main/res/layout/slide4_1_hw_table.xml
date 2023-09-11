@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<TableLayout
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -12,8 +14,9 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -21,7 +24,7 @@
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/please"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -29,36 +32,31 @@
         android:textColor="#595151"
         android:textSize="20sp" />
 
-    <LinearLayout
-
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+    <TableRow>
         <RadioGroup
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
+            android:id="@+id/payment"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp">
             <RadioButton
                 android:id="@+id/paypal"
-                android:checked="true"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="@string/paypal" />
             <RadioButton
                 android:id="@+id/direct"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/direct" />
         </RadioGroup>
 
         <NumberPicker
-
-            android:layout_weight="1"
-            android:id="@+id/number"
-            android:layout_width="0dp"
-            android:layout_height="250dp"/>
-    </LinearLayout>
+            android:layout_column="2"
+            android:id="@+id/numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            />
+    </TableRow>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -67,13 +65,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+    <TableRow>
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/amount"
@@ -81,54 +75,44 @@
             android:padding="20dp"/>
 
         <EditText
-            android:id="@+id/editTextNumberDecimal"
-            android:layout_width="0dp"
+            android:id="@+id/editTextNumberDecimal1"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:ems="10"
             android:inputType="numberDecimal" />
-    </LinearLayout>
+    </TableRow>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+    <TableRow>
         <Button
-            android:layout_margin="20dp"
-            android:layout_weight="1"
+            android:id="@+id/donate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/donate"/>
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/total" />
-
         <TextView
             android:id="@+id/total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:text="@string/total" />
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/tempTotal" />
+    </TableRow>
 
-    </LinearLayout>
+    <TableRow>
+        <ImageButton
 
-    <ImageButton
-        android:src="@drawable/mail"
-        android:layout_gravity="end"
-        android:layout_marginRight="20dp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/circle"
-        />
+            android:src="@drawable/mail"
+            android:layout_column="2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle"
+            />
+    </TableRow>
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+    
+</TableLayout>
 
 
