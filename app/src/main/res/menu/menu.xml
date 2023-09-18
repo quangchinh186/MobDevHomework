@@ -2,11 +2,63 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/slide2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="@string/title" />
+        android:title="slide 2" />
     <item
+        android:id="@+id/slide4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="@string/title" />
+        android:title="slide 4" />
+    <item
+        android:id="@+id/slide5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 5" />
+    <item
+        android:id="@+id/slide6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 6" />
+    <item
+        android:id="@+id/slide7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 7" />
+    <item
+        android:id="@+id/slide8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 8" />
+    <item
+        android:id="@+id/slide9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 9" />
+    <item
+        android:id="@+id/slide10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 10" />
+    <item
+        android:id="@+id/slide11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 11" />
+    <item
+        android:id="@+id/slide12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 12" />
+    <item
+        android:id="@+id/slide13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 13" />
+    <item
+        android:id="@+id/slide14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="slide 14" />
 </menu>

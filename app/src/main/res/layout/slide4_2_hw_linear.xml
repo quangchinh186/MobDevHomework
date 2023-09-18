@@ -120,7 +120,7 @@
 
     <LinearLayout
         android:showDividers="middle"
-        android:divider="empty"
+        android:divider="@color/white"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Donation</string>
+    <string name="app_name">Demo App</string>
     <string name="title">title</string>
     <string name="hello">Welcome You</string>
     <string name="message">Please Give Generously</string>
@@ -9,4 +9,6 @@
     <string name="donate">Donate</string>
     <string name="total">Total so Far: </string>
     <string name="tempTotal">$1998</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
