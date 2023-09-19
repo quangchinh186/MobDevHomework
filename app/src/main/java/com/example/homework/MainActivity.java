@@ -34,14 +34,24 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         if(item.getItemId() == R.id.slide2){
             startActivity(new Intent(this, Slide2.class));
-            //finish();
             return true;
         }
         if(item.getItemId() == R.id.slide4){
             startActivity(new Intent(this, Slide4.class));
             return true;
         }
-
+        if(item.getItemId() == R.id.slide5){
+            startActivity(new Intent(this, Slide5.class));
+            return true;
+        }
+        if(item.getItemId() == R.id.slide6){
+            startActivity(new Intent(this, Slide6.class));
+            return true;
+        }
+        if(item.getItemId() == R.id.slide7){
+            startActivity(new Intent(this, Slide7.class));
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

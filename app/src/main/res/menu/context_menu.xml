@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/bai1" android:title="Bai 1" >
+        <menu>
+            <item android:id="@+id/bai1_linear" android:title="linear"/>
+            <item android:id="@+id/bai1_relative" android:title="relative"/>
+            <item android:id="@+id/bai1_constraint" android:title="constrain"/>
+            <item android:id="@+id/bai1_table" android:title="table"/>
+        </menu>
+    </item>
+
+    <item android:id="@+id/bai2" android:title="Bai 2" >
+        <menu>
+            <item android:id="@+id/bai2_linear" android:title="linear"/>
+            <item android:id="@+id/bai2_relative" android:title="relative"/>
+            <item android:id="@+id/bai2_constraint" android:title="constrain"/>
+            <item android:id="@+id/bai2_table" android:title="table"/>
+        </menu>
+    </item>
+</menu>
