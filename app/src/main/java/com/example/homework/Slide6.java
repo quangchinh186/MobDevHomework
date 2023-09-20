@@ -25,6 +25,12 @@ public class Slide6 extends AppCompatActivity implements PopupMenu.OnMenuItemCli
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
     public boolean onMenuItemClick(MenuItem menuItem) {
         if(menuItem.getItemId() == R.id.option){
             Toast.makeText(this, "option menu is implemented in the main activity", Toast.LENGTH_LONG).show();

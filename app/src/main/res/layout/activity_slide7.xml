@@ -32,4 +32,101 @@
         android:text="()"
         android:textSize="20sp"/>
 
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:hint="phone number"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="callWithIntent"
+        android:text="call by intent"/>
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="search bar"/>
+    <Button
+        android:onClick="search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_gravity="center"/>
+    <TextView
+        android:text="Example: "
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TableLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TableRow>
+            <Button
+                android:onClick="sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sms"/>
+            <Button
+                android:onClick="display"
+                android:text="picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:onClick="openMusic"
+                android:text="music"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:onClick="mapWithAddress"
+                android:text="map w address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:onClick="mapWithAxis"
+                android:text="map w Axis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:textSize="20sp"
+        android:text="Contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/contactID"
+        android:hint="ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:onClick="showContact"
+        android:text="show Contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/current"
+        android:textSize="15sp"
+        android:text="current select contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pick contact"
+        android:onClick="chooseContact"/>
+    <Button
+        android:onClick="editContact"
+        android:text="edit Contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>

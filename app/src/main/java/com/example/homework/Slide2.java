@@ -11,4 +11,10 @@ public class Slide2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slide2_hw);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

@@ -127,6 +127,12 @@ public class Slide4 extends AppCompatActivity {
         return super.onContextItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
     public void toggleListView(View view){
         if(listView.getVisibility() == View.GONE){
             listView.setVisibility(View.VISIBLE);
