@@ -3,6 +3,7 @@ package com.example.homework;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -100,30 +101,40 @@ public class Slide4 extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item){
+        Intent intent = new Intent(this, ViewActivity.class);
         if(item.getItemId() == R.id.bai1_constraint){
-            setContentView(R.layout.slide4_1_hw_constraint);
+            intent.putExtra("mode", "bai1_constraint");
+            startActivity(intent);
         }
         if(item.getItemId() == R.id.bai1_linear){
-            setContentView(R.layout.slide4_1_hw_linear);
+            intent.putExtra("mode", "bai1_linear");
+            startActivity(intent);
         }
         if(item.getItemId() == R.id.bai1_relative){
-            setContentView(R.layout.slide4_1_hw_relative);
+            intent.putExtra("mode", "bai1_relative");
+            startActivity(intent);
         }
         if(item.getItemId() == R.id.bai1_table){
-            setContentView(R.layout.slide4_1_hw_table);
+            intent.putExtra("mode", "bai1_table");
+            startActivity(intent);
         }
         if(item.getItemId() == R.id.bai2_constraint){
-            setContentView(R.layout.slide4_2_hw_constraint);
+            intent.putExtra("mode", "bai2_constraint");
+            startActivity(intent);
         }
         if(item.getItemId() == R.id.bai2_linear){
-            setContentView(R.layout.slide4_2_hw_linear);
+            intent.putExtra("mode", "bai2_linear");
+            startActivity(intent);
         }
         if(item.getItemId() == R.id.bai2_relative){
-            setContentView(R.layout.slide4_2_hw_relative);
+            intent.putExtra("mode", "bai2_relative");
+            startActivity(intent);
         }
         if(item.getItemId() == R.id.bai2_table){
-            setContentView(R.layout.slide4_2_hw_table);
+            intent.putExtra("mode", "bai2_table");
+            startActivity(intent);
         }
+
         return super.onContextItemSelected(item);
     }
 
