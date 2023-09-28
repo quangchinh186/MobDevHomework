@@ -1,10 +1,11 @@
-package com.example.homework;
+package com.example.homework.slide5;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
+import com.example.homework.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class Slide5 extends AppCompatActivity {

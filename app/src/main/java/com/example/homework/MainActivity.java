@@ -1,6 +1,5 @@
 package com.example.homework;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -8,9 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.NumberPicker;
-import android.widget.Toast;
+
+import com.example.homework.slide2.Slide2;
+import com.example.homework.slide4.Slide4;
+import com.example.homework.slide5.Slide5;
+import com.example.homework.slide6.Slide6;
+import com.example.homework.slide7.Slide7;
+import com.example.homework.slide8.Slide8;
+import com.example.homework.slide9.Slide9;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
         }
         if(item.getItemId() == R.id.slide7){
             startActivity(new Intent(this, Slide7.class));
+            return true;
+        }
+        if(item.getItemId() == R.id.slide8){
+            startActivity(new Intent(this, Slide8.class));
+            return true;
+        }
+        if(item.getItemId() == R.id.slide9){
+            startActivity(new Intent(this, Slide9.class));
             return true;
         }
 

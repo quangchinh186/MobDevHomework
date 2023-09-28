@@ -1,9 +1,11 @@
-package com.example.homework;
+package com.example.homework.slide4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.homework.R;
 
 public class ViewActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.homework;
+package com.example.homework.slide6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
+import com.example.homework.R;
+import com.example.homework.slide4.Slide4;
 
 public class Slide6 extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 

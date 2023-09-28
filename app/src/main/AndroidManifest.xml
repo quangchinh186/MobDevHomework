@@ -2,8 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -16,25 +21,46 @@
         android:theme="@style/Theme.Homework"
         tools:targetApi="31">
         <activity
-            android:name=".ViewActivity"
+            android:name=".slide9.SubAct"
             android:exported="false" />
         <activity
-            android:name=".GreetingActivity"
+            android:name=".slide9.Slide9"
+            android:exported="false" />
+
+        <service android:name=".slide8.BackGroundService" />
+        <service android:name=".slide8.ForegroundService" />
+
+        <receiver
+            android:name=".slide8.MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE " />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".slide8.Slide8"
             android:exported="false" />
         <activity
-            android:name=".Slide7"
+            android:name=".slide4.ViewActivity"
             android:exported="false" />
         <activity
-            android:name=".Slide6"
+            android:name=".slide7.GreetingActivity"
             android:exported="false" />
         <activity
-            android:name=".Slide5"
+            android:name=".slide7.Slide7"
             android:exported="false" />
         <activity
-            android:name=".Slide4"
+            android:name=".slide6.Slide6"
             android:exported="false" />
         <activity
-            android:name=".Slide2"
+            android:name=".slide5.Slide5"
+            android:exported="false" />
+        <activity
+            android:name=".slide4.Slide4"
+            android:exported="false" />
+        <activity
+            android:name=".slide2.Slide2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

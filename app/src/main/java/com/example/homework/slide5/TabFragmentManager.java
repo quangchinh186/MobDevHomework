@@ -1,4 +1,4 @@
-package com.example.homework;
+package com.example.homework.slide5;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

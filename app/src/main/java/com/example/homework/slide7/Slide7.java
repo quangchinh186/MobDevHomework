@@ -1,13 +1,11 @@
-package com.example.homework;
+package com.example.homework.slide7;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.SearchManager;
-import android.content.ContentUris;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -16,6 +14,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.homework.R;
 
 public class Slide7 extends AppCompatActivity {
 
@@ -107,6 +107,7 @@ public class Slide7 extends AppCompatActivity {
         String myData = "content://contacts/people/" + id;
         Intent myActivity2 = new Intent(Intent.ACTION_VIEW, Uri.parse(myData));
 
+        //startActivity();
         startActivity(myActivity2);
     }
 

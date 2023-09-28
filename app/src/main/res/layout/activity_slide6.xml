@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Slide6">
+    tools:context=".slide6.Slide6">
 
     <Button
         android:layout_width="wrap_content"

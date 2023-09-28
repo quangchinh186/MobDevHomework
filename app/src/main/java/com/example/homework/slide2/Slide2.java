@@ -1,8 +1,10 @@
-package com.example.homework;
+package com.example.homework.slide2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.homework.R;
 
 public class Slide2 extends AppCompatActivity {
 
