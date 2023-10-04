@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.homework.slide10.Slide10;
 import com.example.homework.slide2.Slide2;
 import com.example.homework.slide4.Slide4;
 import com.example.homework.slide5.Slide5;
@@ -62,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
         }
         if(item.getItemId() == R.id.slide9){
             startActivity(new Intent(this, Slide9.class));
+            return true;
+        }
+        if(item.getItemId() == R.id.slide10){
+            startActivity(new Intent(this, Slide10.class));
             return true;
         }
 
