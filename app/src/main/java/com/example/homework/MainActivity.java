@@ -9,6 +9,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.homework.slide10.Slide10;
+import com.example.homework.slide11.Slide11;
+import com.example.homework.slide12.Slide12;
+import com.example.homework.slide13.Slide13;
+import com.example.homework.slide14.Slide14;
 import com.example.homework.slide2.Slide2;
 import com.example.homework.slide4.Slide4;
 import com.example.homework.slide5.Slide5;
@@ -67,6 +71,22 @@ public class MainActivity extends AppCompatActivity {
         }
         if(item.getItemId() == R.id.slide10){
             startActivity(new Intent(this, Slide10.class));
+            return true;
+        }
+        if(item.getItemId() == R.id.slide11){
+            startActivity(new Intent(this, Slide11.class));
+            return true;
+        }
+        if(item.getItemId() == R.id.slide12){
+            startActivity(new Intent(this, Slide12.class));
+            return true;
+        }
+        if(item.getItemId() == R.id.slide13){
+            startActivity(new Intent(this, Slide13.class));
+            return true;
+        }
+        if(item.getItemId() == R.id.slide14){
+            startActivity(new Intent(this, Slide14.class));
             return true;
         }
 

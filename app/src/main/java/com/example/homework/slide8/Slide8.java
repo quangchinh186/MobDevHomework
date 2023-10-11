@@ -4,22 +4,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 
 import com.example.homework.R;
 
 public class Slide8 extends AppCompatActivity {
+    public static String CHANNEL_ID = "testService";
+    private NotificationChannel channel;
     MyBroadcastReceiver broadcastReceiver = new MyBroadcastReceiver();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.slide8);
         super.onCreate(savedInstanceState);
+
+        channel = new NotificationChannel(
+                CHANNEL_ID,
+                "Example Service Channel",
+                NotificationManager.IMPORTANCE_DEFAULT
+        );
     }
 
     public void registerBroadcast(View view){

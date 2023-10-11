@@ -90,6 +90,11 @@ public class Slide10 extends AppCompatActivity {
         onShowNotes(view);
     }
 
+    public void addMultiple(View view){
+        ContentValues values = new ContentValues();
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
