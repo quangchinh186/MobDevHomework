@@ -10,5 +10,6 @@ public class ConnectivityChangedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.v("slide 12", intent.getAction());
+
     }
 }

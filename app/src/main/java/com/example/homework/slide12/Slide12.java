@@ -2,7 +2,10 @@ package com.example.homework.slide12;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -35,10 +38,11 @@ public class Slide12 extends AppCompatActivity {
 
     //wifi
     private ConnectivityManager connectivityManager;
-    private WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+    private WifiManager wifiManager;
     private TextView wifiStatus;
 
     private void initForWifiTest(){
+        wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
         wifiStatus = findViewById(R.id.wifi_status);
         connectivityManager = getSystemService(ConnectivityManager.class);
         Network network = connectivityManager.getActiveNetwork();
@@ -67,9 +71,9 @@ public class Slide12 extends AppCompatActivity {
     }
 
     //telephony service
-    TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE) ;
+    TelephonyManager telephonyManager;
     void initForTelephony(){
-
+        telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE) ;
     }
     //camera
     //bluetooth
@@ -82,6 +86,8 @@ public class Slide12 extends AppCompatActivity {
         initTestForSensor();
         //wifi
         initForWifiTest();
+        //telephony
+        initForTelephony();
 
     }
 

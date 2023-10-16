@@ -9,11 +9,11 @@ import android.util.Log;
 public class PhoneStateChangedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.v("slide 12", intent.getAction());
+        Log.v("slide 12", intent.getStringExtra(TelephonyManager.EXTRA_STATE));
         String phoneState = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
-        if(phoneState.equals(TelephonyManager.EXTRA_STATE_RINGING)){
-            String phoneNum = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
-            Log.v("slide 12", "incoming call from: " + phoneNum);
+        if (phoneState.equals(TelephonyManager.EXTRA_STATE_RINGING)) {
+            String phoneNumber = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
+            Log.v("slide 12", "Incoming Call From: " + phoneNumber);
         }
     }
 }
